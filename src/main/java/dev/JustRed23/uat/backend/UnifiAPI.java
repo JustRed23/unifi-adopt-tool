@@ -81,7 +81,7 @@ public class UnifiAPI {
 
     public void destroy() throws Exception {
         LOGGER.info("Logging out of controller");
-        query(ControllerAddresses.API_LOGOUT, null);
+        query(ControllerAddresses.API_LOGOUT);
         cookies.clear();
     }
 
