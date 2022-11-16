@@ -1,0 +1,24 @@
+plugins {
+    id 'java'
+}
+
+group 'dev.JustRed23'
+version '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+    maven { url 'https://jitpack.io' }
+}
+
+dependencies {
+    implementation 'com.github.cirola2000:Unifi-Java-API:v0.1'
+    implementation 'ch.qos.logback:logback-classic:1.4.4'
+    implementation 'org.json:json:20220924'
+
+    testImplementation 'org.junit.jupiter:junit-jupiter-api:5.9.0'
+    testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.9.0'
+}
+
+test {
+    useJUnitPlatform()
+}
