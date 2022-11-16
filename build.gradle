@@ -11,8 +11,9 @@ repositories {
 }
 
 dependencies {
-    implementation 'com.github.cirola2000:Unifi-Java-API:v0.1'
     implementation 'ch.qos.logback:logback-classic:1.4.4'
+    implementation 'com.github.cirola2000:Unifi-Java-API:v0.1'
+    implementation 'org.jetbrains:annotations:23.0.0'
     implementation 'org.json:json:20220924'
 
     testImplementation 'org.junit.jupiter:junit-jupiter-api:5.9.0'
