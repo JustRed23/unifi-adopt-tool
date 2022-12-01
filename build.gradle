@@ -12,7 +12,7 @@ repositories {
 
 dependencies {
     implementation 'ch.qos.logback:logback-classic:1.4.5'
-    implementation 'com.github.cirola2000:Unifi-Java-API:v0.1'
+    implementation 'net.java.dev.jna:jna:5.10.0'
     implementation 'org.jetbrains:annotations:23.0.0'
     implementation 'org.json:json:20220924'
 
