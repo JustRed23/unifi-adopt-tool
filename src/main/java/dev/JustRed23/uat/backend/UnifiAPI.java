@@ -46,7 +46,7 @@ public class UnifiAPI {
 
     public void connect() throws Exception {
         LOGGER.info("Logging in to controller");
-        String address = "https://" + host + ":" + port + ControllerAddresses.API_LOGIN.getRoute();
+        String address = "https://" + host + ":" + port + ControllerAddresses.API_LOGIN.getRouteFormat();
 
         LOGGER.debug("Connecting to: " + address);
         URL url = new URL(address);
@@ -90,7 +90,7 @@ public class UnifiAPI {
     }
 
     public JSONArray query(ControllerAddresses.Route route, JSONObject query) throws Exception {
-        String address = "https://" + host + ":" + port + route.getRoute();
+        String address = "https://" + host + ":" + port + route.getRouteFormat();
 
         LOGGER.debug("Connecting to: " + address);
         URL url = new URL(address);

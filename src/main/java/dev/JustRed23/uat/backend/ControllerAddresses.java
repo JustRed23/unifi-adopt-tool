@@ -5,14 +5,14 @@ import static dev.JustRed23.uat.backend.ControllerAddresses.Method.*;
 @SuppressWarnings("unused")
 public final class ControllerAddresses {
 
-    public static String SITE_NAME = "default";
+    private static String SITE_NAME = "default";
 
     public static final Route //API Common Endpoints
             API_LOGIN = new Route("/api/login", POST),
             API_LOGOUT = new Route("/api/logout", POST),
             API_SELF = new Route("/api/self", GET),
             API_SITES = new Route("/api/self/sites", GET),
-            API_SITE = new Route("/api/s/" + SITE_NAME, GET),
+            API_SITE = new Route("/api/s/$$SITENAME$$", GET),
             SITE_CMD = new Route(API_SITE.getRoute() + "/cmd", POST);
 
     public static final Route //Managers
@@ -20,6 +20,14 @@ public final class ControllerAddresses {
             SITEMGR = new Route(SITE_CMD.getRoute() + "/sitemgr", POST),
             STAMGR = new Route(SITE_CMD.getRoute() + "/stamgr", POST),
             DEVMGR = new Route(SITE_CMD.getRoute() + "/devmgr", POST);
+
+    public static String getSiteName() {
+        return SITE_NAME;
+    }
+
+    public static void setSiteName(String siteName) {
+        SITE_NAME = siteName;
+    }
 
     public static class Route {
 
@@ -33,6 +41,10 @@ public final class ControllerAddresses {
 
         public String getRoute() {
             return route;
+        }
+
+        public String getRouteFormat() {
+            return route.replace("$$SITENAME$$", getSiteName());
         }
 
         public String getMethod() {
