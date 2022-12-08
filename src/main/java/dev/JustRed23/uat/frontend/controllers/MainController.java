@@ -5,7 +5,6 @@ import dev.JustRed23.uat.frontend.Main;
 import javafx.application.Platform;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
-import javafx.scene.Cursor;
 import javafx.scene.control.Button;
 import javafx.scene.control.TextField;
 import javafx.scene.layout.BorderPane;
@@ -136,8 +135,8 @@ public class MainController implements Initializable {
         }, "backend").start();
     }
 
-    private void adoptFailed() {
-        status.setText("Adopt failed: " + combineMac() + " was not found.");
+    private void adoptFailed(String error) {
+        status.setText(error);
         after(false);
     }
 
