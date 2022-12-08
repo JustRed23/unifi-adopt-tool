@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane prefHeight="180.0" prefWidth="450.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="dev.JustRed23.uat.frontend.controllers.MainController">
+   <children>
+      <BorderPane prefHeight="180.0" prefWidth="450.0" style="-fx-background-color: #7B7C81;">
+         <top>
+            <BorderPane fx:id="head" prefHeight="41.0" prefWidth="600.0" style="-fx-background-color: #453C41;" BorderPane.alignment="CENTER">
+               <right>
+                  <Button fx:id="exit" cancelButton="true" contentDisplay="CENTER" mnemonicParsing="false" onMouseEntered="#exitHover" onMouseExited="#exitUnhover" onMousePressed="#exitCalled" style="-fx-background-color: #453C41; -fx-border-color: #453C41;" text="🗙" textFill="white" BorderPane.alignment="CENTER">
+                     <BorderPane.margin>
+                        <Insets right="15.0" />
+                     </BorderPane.margin>
+                     <font>
+                        <Font name="System Bold" size="16.0" />
+                     </font>
+                  </Button>
+               </right>
+               <left>
+                  <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="Unifi Adopt Tool" BorderPane.alignment="CENTER">
+                     <BorderPane.margin>
+                        <Insets left="12.0" />
+                     </BorderPane.margin>
+                     <font>
+                        <Font name="System Bold" size="15.0" />
+                     </font>
+                  </Text>
+               </left>
+            </BorderPane>
+         </top>
+         <center>
+            <Pane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+               <children>
+                  <Text fx:id="status" fill="#D4DBE2" layoutY="28.0" strokeType="OUTSIDE" strokeWidth="1.0" text="status" textAlignment="CENTER" visible="false" wrappingWidth="450.0">
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                  </Text>
+                  <TextField fx:id="MAC1" alignment="CENTER" layoutX="46.0" layoutY="44.0" prefHeight="31.0" prefWidth="50.0" promptText="AA" />
+                  <TextField fx:id="MAC2" alignment="CENTER" layoutX="106.0" layoutY="44.0" prefHeight="31.0" prefWidth="50.0" promptText="AA" />
+                  <TextField fx:id="MAC3" alignment="CENTER" layoutX="166.0" layoutY="44.0" prefHeight="31.0" prefWidth="50.0" promptText="AA" />
+                  <TextField fx:id="MAC4" alignment="CENTER" layoutX="226.0" layoutY="44.0" prefHeight="31.0" prefWidth="50.0" promptText="AA" />
+                  <TextField fx:id="MAC5" alignment="CENTER" layoutX="286.0" layoutY="44.0" prefHeight="31.0" prefWidth="50.0" promptText="AA" />
+                  <TextField fx:id="MAC6" alignment="CENTER" layoutX="346.0" layoutY="44.0" prefHeight="31.0" prefWidth="50.0" promptText="AA" />
+                  <Button fx:id="adopt" disable="true" layoutX="170.0" layoutY="91.0" mnemonicParsing="false" onMousePressed="#adoptCalled" prefHeight="31.0" prefWidth="101.0" text="Adopt" />
+               </children>
+            </Pane>
+         </center>
+      </BorderPane>
+   </children>
+</AnchorPane>
