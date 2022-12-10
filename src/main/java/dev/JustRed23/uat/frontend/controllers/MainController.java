@@ -101,6 +101,8 @@ public class MainController implements Initializable {
         MAC4.clear();
         MAC5.clear();
         MAC6.clear();
+
+        adopt.setDisable(true);
     }
 
     private String adoptOrigStyle;
@@ -146,8 +148,6 @@ public class MainController implements Initializable {
     }
 
     private void after(boolean success) {
-        if (success)
-            clearMAC();
         MAC1.setDisable(false);
         MAC2.setDisable(false);
         MAC3.setDisable(false);
@@ -162,6 +162,9 @@ public class MainController implements Initializable {
         adopt.setText("Adopt");
         adopt.setTextFill(adoptOrigFill);
         adopt.setStyle(adoptOrigStyle);
+
+        if (success)
+            clearMAC();
     }
 
     @FXML
