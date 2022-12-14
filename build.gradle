@@ -13,7 +13,7 @@ repositories {
 dependencies {
     implementation 'ch.qos.logback:logback-classic:1.3.0'
     implementation 'com.github.JustRed23:ipscan:f0e00f9b54'
-    implementation 'com.github.JustRed23:ABCM:1.3'
+    implementation 'com.github.JustRed23:ABCM:1.4'
     implementation 'com.jcraft:jsch:0.1.55'
     implementation 'net.java.dev.jna:jna:5.10.0'
     implementation 'org.jetbrains:annotations:23.0.0'
